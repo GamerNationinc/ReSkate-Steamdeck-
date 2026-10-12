@@ -73,7 +73,7 @@ Deliverables:
   - **(A)** A non-Steam shortcut to `ReSkateLauncher.exe` with Proton forced.
   - **(B)** Keep the skate. library entry and change its launch options so it runs the launcher instead
     of the game, e.g. `bash -c 'exec "${@/Skate.exe/ReSkateLauncher.exe}"' -- %command% --no-gui`
-    (the exact exe name Steam starts must be checked).
+    (Steam actually starts `EAAntiCheat.GameServiceLauncher.exe`; see `docs/steam-deck-findings.md`)
 - (B) gives the real app ID, the Steam playtime, the cloud prefix and the Deck's "Verified" controller
   settings, so it is the better default. Support both.
 - The launcher must be started by Steam so that Proton's `steam.exe` and `STEAM_COMPAT_CLIENT_INSTALL_PATH`
